@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "pg": "^8.23.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "name": "meal-loop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --watch server.js\" \"vite\"",
+    "start": "node server.js",
+    "build": "vite build",
+    "db:start": "node scripts/local-db.mjs",
+    "db:seed": "node scripts/seed.js",
+    "test": "node --test tests/api.test.js",
+    "test:ui": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "overrides": {
+    "concurrently": {
+      "shell-quote": "1.11.0"
+    }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.5",
+    "embedded-postgres": "^18.4.0-beta.17",
+    "vite": "^8.3.3"
+  }
+}

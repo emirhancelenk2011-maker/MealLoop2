@@ -1,0 +1,8 @@
+{
+  "bread": { "src": "/images/bread.jpg", "width": 512, "height": 512 },
+  "salad": { "src": "/images/salad.jpg", "width": 452, "height": 678 },
+  "somsa": { "src": "/images/somsa-patir.jpg", "width": 1280, "height": 960 },
+  "bowl": { "src": "/images/salad-bowl.jpg", "width": 1024, "height": 1024 },
+  "sweets": { "src": "/images/sweets.jpg", "width": 2048, "height": 1365 },
+  "produce": { "src": "/images/fruit-vegetables.jpg", "width": 2560, "height": 2560 }
+}

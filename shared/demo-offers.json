@@ -1,0 +1,146 @@
+[
+  {
+    "key": "demo-0",
+    "business_id": 3,
+    "category": "Fırın",
+    "title": {
+      "uz": "Nonvoyxonadan syurpriz to'plam",
+      "ru": "Сюрприз-набор из пекарни",
+      "en": "Surprise Bakery Bundle"
+    },
+    "description": {
+      "uz": "Kun davomida tayyorlangan yangi 5 ta somsa va patir. Tarkibi o'zgarishi mumkin; allergenga oid ma'lumot uchun novvoyga murojaat qiling.",
+      "ru": "5 свежих самсы и патыров, приготовленных в течение дня. Состав может меняться; уточняйте аллергены у продавца.",
+      "en": "5 fresh baked items (samsa and patir) made today. Selection may vary; ask staff for allergen details."
+    },
+    "address": {
+      "uz": "Chilonzor tumani, Muqimiy ko'chasi, 24-uy, Toshkent",
+      "ru": "Ташкент, Чиланзарский район, улица Мукими, 24",
+      "en": "24 Muqimiy Street, Chilonzor, Tashkent"
+    },
+    "price": 35000,
+    "original_price": 90000,
+    "quantity": 5,
+    "image_key": "somsa"
+  },
+  {
+    "key": "demo-1",
+    "business_id": 4,
+    "category": "Restoran",
+    "title": {
+      "uz": "Kunning baraka kosasi",
+      "ru": "Чаша добра дня",
+      "en": "Daily Goodness Bowl"
+    },
+    "description": {
+      "uz": "Mavsumiy sabzavotlar, don mahsulotlari va uy sousi bilan tayyorlangan to'yimli kosa.",
+      "ru": "Сытная чаша с сезонными овощами, злаками и домашним соусом.",
+      "en": "A hearty bowl prepared with seasonal vegetables, grains, and homemade sauce."
+    },
+    "address": {
+      "uz": "Yakkasaroy tumani, Shota Rustaveli ko'chasi, 18-uy, Toshkent",
+      "ru": "Ташкент, Яккасарайский район, улица Шота Руставели, 18",
+      "en": "18 Shota Rustaveli Street, Yakkasaroy, Tashkent"
+    },
+    "price": 45000,
+    "original_price": 110000,
+    "quantity": 4,
+    "image_key": "bowl"
+  },
+  {
+    "key": "demo-2",
+    "business_id": 3,
+    "category": "Kafe",
+    "title": {
+      "uz": "Shirin yakun",
+      "ru": "Сладкое завершение",
+      "en": "Sweet Delight Set"
+    },
+    "description": {
+      "uz": "Kunlik ishlab chiqarishdan qolgan ikki kishilik shirinlik va pishiriqlar to'plami.",
+      "ru": "Ассорти из свежих десертов и печенья на двоих из дневной выпечки.",
+      "en": "A selection of fresh daily pastries and desserts for two."
+    },
+    "address": {
+      "uz": "Mirobod tumani, Nukus ko'chasi, 12-uy, Toshkent",
+      "ru": "Ташкент, Мирабадский район, улица Нукус, 12",
+      "en": "12 Nukus Street, Mirobod, Tashkent"
+    },
+    "price": 40000,
+    "original_price": 100000,
+    "quantity": 3,
+    "image_key": "sweets"
+  },
+  {
+    "key": "demo-3",
+    "business_id": 4,
+    "category": "Manav",
+    "title": {
+      "uz": "Mavsumiy meva-sabzavot paketi",
+      "ru": "Сезонный продуктовый набор",
+      "en": "Seasonal Produce Pack"
+    },
+    "description": {
+      "uz": "Tashqi ko'rinishi biroz mukammal bo'lmagan, lekin shirali va sarxil mavsumiy meva hamda sabzavotlar. Taxminan 2 kg.",
+      "ru": "Свежие и вкусные сезонные фрукты и овощи с незначительными внешними изъянами. Около 2 кг.",
+      "en": "Fresh and tasty seasonal fruits and vegetables with minor visual flaws. Approx. 2 kg."
+    },
+    "address": {
+      "uz": "Yashnobod tumani, Sodiq Azimov ko'chasi, 45-uy, Toshkent",
+      "ru": "Ташкент, Яшнабадский район, улица Садыка Азимова, 45",
+      "en": "45 Sodiq Azimov Street, Yashnobod, Tashkent"
+    },
+    "price": 30000,
+    "original_price": 80000,
+    "quantity": 6,
+    "image_key": "produce"
+  },
+  {
+    "key": "demo-bread",
+    "business_id": 3,
+    "category": "Fırın",
+    "image_key": "bread",
+    "title": {
+      "uz": "Pechdan chiqqan nonlar",
+      "ru": "Хлеб из печи",
+      "en": "Oven-baked bread"
+    },
+    "description": {
+      "uz": "Qarsildoq qobiqli dumaloq nonlardan to‘plam. Bugungi pishiriq; tarkibida bug‘doy va gluten bor.",
+      "ru": "Набор круглых буханок с хрустящей корочкой из сегодняшней выпечки. Содержит пшеницу и глютен.",
+      "en": "A selection of round, crusty loaves from today’s bake. Contains wheat and gluten."
+    },
+    "address": {
+      "uz": "Chilonzor tumani, Muqimiy ko'chasi, 24-uy, Toshkent",
+      "ru": "Ташкент, Чиланзарский район, улица Мукими, 24",
+      "en": "24 Muqimiy Street, Chilonzor, Tashkent"
+    },
+    "price": 35000,
+    "original_price": 90000,
+    "quantity": 5
+  },
+  {
+    "key": "demo-salad",
+    "business_id": 4,
+    "category": "Restoran",
+    "image_key": "salad",
+    "title": {
+      "uz": "Yangi sabzavotli salat",
+      "ru": "Свежий овощной салат",
+      "en": "Fresh vegetable salad"
+    },
+    "description": {
+      "uz": "Bodring, pomidor, bulg‘or qalampiri va ko‘katlardan salat. Sous tarkibini hamkordan so‘rang.",
+      "ru": "Салат с огурцами, помидорами, сладким перцем и зеленью. Состав заправки уточняйте у заведения.",
+      "en": "A salad with cucumber, tomatoes, sweet peppers and leafy greens. Ask the kitchen about the dressing."
+    },
+    "address": {
+      "uz": "Yakkasaroy tumani, Shota Rustaveli ko'chasi, 18-uy, Toshkent",
+      "ru": "Ташкент, Яккасарайский район, улица Шота Руставели, 18",
+      "en": "18 Shota Rustaveli Street, Yakkasaroy, Tashkent"
+    },
+    "price": 30000,
+    "original_price": 60000,
+    "quantity": 4
+  }
+]

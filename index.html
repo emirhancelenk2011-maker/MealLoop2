@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yaqin atrofdagi taom paketlarini toping, band qiling va olib keting." />
+    <title>MealLoop</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      (() => {
+        let saved;
+        try { saved = localStorage.getItem('mealloop.theme'); } catch {}
+        document.documentElement.dataset.theme = ['light', 'dark'].includes(saved) ? saved : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/client/main.jsx"></script>
+  </body>
+</html>

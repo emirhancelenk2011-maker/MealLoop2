@@ -1,0 +1,152 @@
+{
+  "invalid_id": {
+    "uz": "Yozuv raqami noto‘g‘ri.",
+    "ru": "Неверный номер записи.",
+    "en": "Invalid record ID."
+  },
+  "invalid_text": {
+    "uz": "Nomi (3–100), tavsifi (5–600) va manzilni (5–240 belgi) to‘ldiring.",
+    "ru": "Заполните название (3–100), описание (5–600) и адрес (5–240 символов).",
+    "en": "Enter a title (3–100), description (5–600) and address (5–240 characters)."
+  },
+  "invalid_category": {
+    "uz": "Toifani tanlang.",
+    "ru": "Выберите категорию.",
+    "en": "Select a valid category."
+  },
+  "invalid_price": {
+    "uz": "Narx 0 dan katta, 99 999 999,99 so‘mdan oshmagan va ko‘pi bilan ikki kasr xonali bo‘lishi kerak.",
+    "ru": "Цена должна быть больше 0, не выше 99 999 999,99 UZS и содержать не более двух знаков после запятой.",
+    "en": "Price must be above 0, at most 99,999,999.99 UZS, with up to two decimal places."
+  },
+  "price_order": {
+    "uz": "Paket narxi odatiy narxdan oshmasligi kerak.",
+    "ru": "Цена пакета не может превышать обычную цену.",
+    "en": "Package price cannot exceed the regular price."
+  },
+  "invalid_quantity": {
+    "uz": "Miqdor 0 dan 10000 gacha butun son bo‘lishi kerak.",
+    "ru": "Количество должно быть целым числом от 0 до 10000.",
+    "en": "Quantity must be a whole number between 0 and 10000."
+  },
+  "invalid_time": {
+    "uz": "Olib ketish vaqtini to‘g‘ri kiriting.",
+    "ru": "Укажите корректное время получения.",
+    "en": "Enter valid pickup times."
+  },
+  "time_order": {
+    "uz": "Tugash vaqti boshlanish vaqtidan keyin va kelajakda bo‘lishi kerak.",
+    "ru": "Время окончания должно быть позже начала и в будущем.",
+    "en": "Pickup end must be after the start and in the future."
+  },
+  "origin_denied": {
+    "uz": "Bu manbadan so‘rovga ruxsat yo‘q.",
+    "ru": "Запросы из этого источника запрещены.",
+    "en": "Requests from this origin are not allowed."
+  },
+  "demo_disabled": {
+    "uz": "Demo kirish o‘chirilgan.",
+    "ru": "Демонстрационный вход отключён.",
+    "en": "Demo sign-in is disabled."
+  },
+  "account_missing": {
+    "uz": "Hisob topilmadi.",
+    "ru": "Аккаунт не найден.",
+    "en": "Account not found."
+  },
+  "unauthorized": {
+    "uz": "Davom etish uchun hisobga kiring.",
+    "ru": "Войдите, чтобы продолжить.",
+    "en": "Sign in to continue."
+  },
+  "forbidden": {
+    "uz": "Bu amal uchun ruxsatingiz yo‘q.",
+    "ru": "У вас нет прав для этого действия.",
+    "en": "You do not have permission for this action."
+  },
+  "version_missing": {
+    "uz": "Paket versiyasi yo‘q. Sahifani yangilang.",
+    "ru": "Отсутствует версия пакета. Обновите страницу.",
+    "en": "Package version is missing. Refresh the page."
+  },
+  "package_missing": {
+    "uz": "Paket topilmadi.",
+    "ru": "Пакет не найден.",
+    "en": "Package not found."
+  },
+  "stock_changed": {
+    "uz": "Paket yoki miqdor o‘zgardi. Joriy ma’lumotlarni ochib, qayta tahrirlang.",
+    "ru": "Пакет или остаток изменился. Откройте свежие данные и повторите изменение.",
+    "en": "Package or stock changed. Reopen the latest package before editing."
+  },
+  "active_reservations": {
+    "uz": "Faol bandlovli paketni o‘chirib bo‘lmaydi. Avval uni topshiring yoki qolgan miqdorni 0 qiling.",
+    "ru": "Нельзя удалить пакет с активными бронями. Сначала выдайте заказы или установите остаток 0.",
+    "en": "A package with active reservations cannot be deleted. Complete pickup or set remaining stock to 0."
+  },
+  "invalid_key": {
+    "uz": "Bandlov kaliti noto‘g‘ri.",
+    "ru": "Неверный ключ бронирования.",
+    "en": "Invalid reservation key."
+  },
+  "key_conflict": {
+    "uz": "Bu so‘rov kaliti boshqa paketga tegishli.",
+    "ru": "Ключ запроса принадлежит другому пакету.",
+    "en": "This request key belongs to another package."
+  },
+  "package_unavailable": {
+    "uz": "Bu paket endi mavjud emas.",
+    "ru": "Этот пакет больше недоступен.",
+    "en": "This package is no longer available."
+  },
+  "out_of_stock": {
+    "uz": "Oxirgi paket hozirgina band qilindi. Boshqa paketni tanlang.",
+    "ru": "Последний пакет уже забронировали. Выберите другой.",
+    "en": "The last package was just reserved. Please choose another."
+  },
+  "action_missing": {
+    "uz": "Amal topilmadi.",
+    "ru": "Действие не найдено.",
+    "en": "Action not found."
+  },
+  "reservation_missing": {
+    "uz": "Bandlov topilmadi.",
+    "ru": "Бронирование не найдено.",
+    "en": "Reservation not found."
+  },
+  "reservation_inactive": {
+    "uz": "Bu bandlov endi faol emas.",
+    "ru": "Это бронирование больше не активно.",
+    "en": "This reservation is no longer active."
+  },
+  "route_missing": {
+    "uz": "Manzil topilmadi.",
+    "ru": "Адрес не найден.",
+    "en": "Endpoint not found."
+  },
+  "invalid_json": {
+    "uz": "So‘rov ma’lumotlari noto‘g‘ri.",
+    "ru": "Некорректные данные запроса.",
+    "en": "Invalid request data."
+  },
+  "server_error": {
+    "uz": "Xatolik yuz berdi. Qayta urinib ko‘ring.",
+    "ru": "Произошла ошибка. Попробуйте снова.",
+    "en": "Something went wrong. Please try again."
+  },
+  "network_error": {
+    "uz": "Server bilan aloqa yo‘q. Ulanishni tekshirib, qayta urinib ko‘ring.",
+    "ru": "Нет связи с сервером. Проверьте соединение и повторите попытку.",
+    "en": "Cannot reach the server. Check your connection and try again."
+  },
+  "rates_unavailable": {
+    "uz": "Valyuta kurslari hozircha mavjud emas.",
+    "ru": "Курсы валют временно недоступны.",
+    "en": "Exchange rates are currently unavailable."
+  },
+  "invalid_image": {
+    "uz": "Mos paket rasmini tanlang.",
+    "ru": "Выберите допустимое фото пакета.",
+    "en": "Select a valid package photo."
+  }
+}
