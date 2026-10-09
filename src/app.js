@@ -50,8 +50,9 @@ async function transaction(pool, action) {
     throw error;
   } finally { client.release(); }
 }
-function createApp(pool, { demoEnabled = process.env.NODE_ENV !== 'production', getRates = createRateService() } = {}) {
+function createApp(pool, { demoEnabled = process.env.NODE_ENV !== 'production', getRates = createRateService(), trustProxy = false } = {}) {
   const app = express();
+  app.set('trust proxy', trustProxy);
   app.disable('x-powered-by');
   app.use('/api', (req, res, next) => {
     res.set('Cache-Control', 'no-store');

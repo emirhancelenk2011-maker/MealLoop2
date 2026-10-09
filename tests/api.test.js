@@ -22,6 +22,20 @@ before(async () => {
 });
 after(async () => { if (env) await env.close(); });
 
+test('Vercel handler migrates PostgreSQL and serves the existing API', async t => {
+  const http = require('node:http');
+  const { createServerlessHandler } = require('../src/serverless');
+  const server = http.createServer(createServerlessHandler(env.pool, { trustProxy: 1 })).listen(0, '127.0.0.1');
+  await new Promise((resolve, reject) => { server.once('listening', resolve); server.once('error', reject); });
+  t.after(() => new Promise(resolve => server.close(resolve)));
+  const base = `http://127.0.0.1:${server.address().port}`;
+  const health = await fetch(`${base}/api/health`);
+  assert.equal(health.status, 200);
+  assert.equal((await health.json()).database, 'postgresql');
+  const packages = await fetch(`${base}/api/packages`);
+  assert.ok((await packages.json()).some(item => item.seed_key === 'demo-0'));
+});
+
 test('localized API errors, default Uzbek and malformed JSON', async () => {
   for (const language of ['uz','ru','en']) {
     const result=await request('/api/reservations',{language});

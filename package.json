@@ -17,7 +17,7 @@
     "build": "vite build",
     "db:start": "node scripts/local-db.mjs",
     "db:seed": "node scripts/seed.js",
-    "test": "node --test tests/api.test.js",
+    "test": "node --test tests/api.test.js tests/serverless.test.js",
     "test:ui": "playwright test"
   },
   "keywords": [],

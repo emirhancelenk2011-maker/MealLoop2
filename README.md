@@ -1,5 +1,36 @@
 # MealLoop
 
+## Deploying to Vercel
+
+The frontend and API must both be deployed. A successful Vite build alone does not start `server.js`: without an API function, `/api/session` and `/api/packages` return 404 and the page displays the generic error below the navbar.
+
+This repository includes `api/index.js` and `vercel.json`. Vercel serves the Vite build from `dist` and routes `/api/*` to the existing Express API. Each function instance reuses a PostgreSQL pool and runs the existing schema migration before handling requests. Failed initialization returns a JSON error and can retry on the next request. Local development still uses `server.js`.
+
+1. Create a hosted **PostgreSQL** database, for example using the [Neon integration in Vercel Marketplace](https://vercel.com/marketplace/neon). Connect it to the MealLoop project.
+2. In Vercel project **Settings / Environment Variables**, ensure `DATABASE_URL` contains the provider's PostgreSQL connection string for **Production** (and a separate database for Preview if needed). Preserve the provider's SSL parameters. Prefer the provider's pooled connection URL. Do not use the local `.env.example` URL: `127.0.0.1:54329` only works on your computer. Never name this variable `VITE_DATABASE_URL`, which would expose it to the browser.
+3. Use Framework Preset **Vite**, Build Command `npm run build`, Output Directory `dist`, and Node.js **24.x**. The Root Directory must be the folder containing `package.json`, `vercel.json`, and `api/`. The checked-in config supplies the framework, build command, and output directory.
+4. Commit and push the deployment files, then redeploy after setting the environment variable. Do not upload `.env`, `.env.*`, `.local-postgres`, or `node_modules`.
+5. Open `https://YOUR-DOMAIN/api/health`. Success is `{"status":"ok","database":"postgresql"}`. `/api/session` should return `null` for a signed-out visitor, and `/api/packages` should return a JSON array.
+
+The first API request creates the tables but does not copy your laptop's records or insert demo data. To populate a **demo database**, create a local `.env.vercel.local` file with the hosted `DATABASE_URL` (this file is ignored by Git), then run:
+
+```powershell
+node --env-file=.env.vercel.local scripts/seed.js
+```
+
+The explicit env file selects the hosted database instead of the local `.env`. This command adds missing demo records without replacing existing records. Demo offers expire after 25 hours; rerunning seed does not refresh existing offers.
+
+Production intentionally disables the passwordless demo account picker. Browsing packages works, but real authentication is needed for public sign-in and reservations. Do not set `NODE_ENV=development` to bypass this protection.
+
+Troubleshooting:
+
+- **404 from `/api/health`:** the API is not deployed/routed. Confirm the latest commit contains `api/index.js`, `src/serverless.js`, and `vercel.json`, and check the Vercel Root Directory.
+- **503 from `/api/health`:** open Vercel runtime logs. Check that `DATABASE_URL` is present in the deployed environment and that the hosted database is reachable. The database role needs permission to create/update the application's tables.
+- **200 from health, `[]` from packages:** the API works, but there are no unexpired offers in that database.
+- **403 with `demo_disabled` on sign-in:** expected in production until real authentication is implemented.
+
+See [Vercel Node.js functions](https://vercel.com/docs/functions/runtimes/node-js) and [Vercel database integrations](https://vercel.com/docs/marketplace-storage).
+
 React + Express + PostgreSQL ile yemek paketi ve rezervasyon uygulaması. Mevcut `server.js`, API rotaları, tablolar ve kayıtlar korunarak geliştirilmiştir.
 
 ## Çalıştırma (Windows / PowerShell)
